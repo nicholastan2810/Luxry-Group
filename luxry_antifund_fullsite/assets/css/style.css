@@ -671,6 +671,13 @@ section {
   letter-spacing: 0.5px;
 }
 
+.company-logo {
+  width: 80px;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+}
+
 .investment-content {
   flex: 1;
 }
@@ -702,6 +709,11 @@ section {
     width: 60px;
     height: 60px;
     font-size: 10px;
+  }
+  
+  .company-logo {
+    width: 60px;
+    max-height: 60px;
   }
 }
 
