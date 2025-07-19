@@ -596,13 +596,7 @@ p {
   color: #333;
 }
 
-/* Special tagline styling */
-.tagline {
-  font-size: 16px;
-  font-weight: 400;
-  color: #666;
-  margin-bottom: 32px;
-}
+/* Removed tagline styling - now using regular paragraphs */
 
 /* Section spacing */
 section {
@@ -611,6 +605,30 @@ section {
 
 .intro {
   margin-bottom: 56px;
+}
+
+.intro h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 32px;
+  color: #000;
+  letter-spacing: -0.02em;
+}
+
+.intro p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: #333;
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 40px;
+  }
 }
 
 /* Investment items styling */
