@@ -637,17 +637,10 @@ section {
 }
 
 .toc-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.toc-list > li {
-  margin-bottom: 12px;
-}
-
-.toc-list > li:last-child {
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 28px; /* Indent to match "Table of Contents" text alignment */
 }
 
 .toc-list a {
@@ -656,32 +649,10 @@ section {
   font-size: 15px;
   line-height: 1.5;
   transition: color 0.2s ease;
+  display: block;
 }
 
 .toc-list a:hover {
-  color: #007AFF;
-}
-
-.toc-sublist {
-  list-style: none;
-  padding: 0;
-  margin: 8px 0 0 20px;
-}
-
-.toc-sublist li {
-  margin-bottom: 6px;
-}
-
-.toc-sublist li:last-child {
-  margin-bottom: 0;
-}
-
-.toc-sublist a {
-  color: #666;
-  font-size: 14px;
-}
-
-.toc-sublist a:hover {
   color: #007AFF;
 }
 

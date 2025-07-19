@@ -232,36 +232,13 @@
         <span class="toc-icon">▼</span>
         <span class="toc-title">Table of Contents</span>
       </div>
-      <div class="toc-content" id="tocContent">
-        <ul class="toc-list">
-          <li><a href="#investments">Select investments</a></li>
-          <li>
-            <a href="#team">Our team</a>
-            <ul class="toc-sublist">
-              <li><a href="#jake-paul">Jake Paul</a></li>
-              <li><a href="#geoffrey-woo">Geoffrey Woo</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#help">How we help</a>
-            <ul class="toc-sublist">
-              <li><a href="#product">Product</a></li>
-              <li><a href="#go-to-market">Go-to-market</a></li>
-              <li><a href="#fundraising">Fundraising</a></li>
-              <li><a href="#strategic-inflection-points">Strategic inflection points</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#faq">FAQ</a>
-            <ul class="toc-sublist">
-              <li><a href="#what-stage">What stage do you focus on?</a></li>
-              <li><a href="#late-stage">Will you invest in late-stage rounds?</a></li>
-              <li><a href="#what-invest">What do you invest in?</a></li>
-              <li><a href="#check-size">What's your check size?</a></li>
-              <li><a href="#how-invest">How can I invest in the fund?</a></li>
-            </ul>
-          </li>
-        </ul>
+      <div class="toc-content active" id="tocContent">
+        <div class="toc-list">
+          <a href="#investments">Select investments</a>
+          <a href="#team">Our team</a>
+          <a href="#help">How we help</a>
+          <a href="#faq">FAQ</a>
+        </div>
       </div>
     </section>
 
@@ -455,11 +432,11 @@
       
       tocContent.classList.toggle('active');
       
-      // Rotate icon
+      // Update icon based on state
       if (tocContent.classList.contains('active')) {
-        tocIcon.textContent = '▲';
-      } else {
         tocIcon.textContent = '▼';
+      } else {
+        tocIcon.textContent = '▶';
       }
     }
 
