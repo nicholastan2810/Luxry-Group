@@ -525,9 +525,9 @@ body {
   position: relative;
   display: flex;
   justify-content: flex-start;
-  padding-left: 40px;
-  margin-top: -80px; /* Position logo to straddle banner/content border */
-  margin-bottom: 60px;
+  max-width: 680px;
+  margin: -80px auto 60px auto; /* Position logo to straddle banner/content border and center container */
+  padding-left: 40px; /* Match main content padding */
   z-index: 10;
 }
 
@@ -808,9 +808,8 @@ footer p {
   }
   
   .profile-container {
-    padding-left: 24px;
-    margin-top: -60px;
-    margin-bottom: 40px;
+    padding-left: 24px; /* Match main responsive padding */
+    margin: -60px auto 40px auto;
   }
   
   .profile-picture {
@@ -898,9 +897,8 @@ footer p {
   }
   
   .profile-container {
-    padding-left: 20px;
-    margin-top: -50px;
-    margin-bottom: 30px;
+    padding-left: 20px; /* Match main responsive padding */
+    margin: -50px auto 30px auto;
   }
   
   .profile-picture {
