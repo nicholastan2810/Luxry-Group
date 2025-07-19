@@ -777,7 +777,7 @@ section {
 .toc-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0;
   margin-left: 28px; /* Indent to match "Table of Contents" text alignment */
 }
 
@@ -788,6 +788,8 @@ section {
   line-height: 1.5;
   transition: color 0.2s ease;
   display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid #e9ecef;
 }
 
 .toc-list a:hover {
