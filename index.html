@@ -234,10 +234,10 @@
       </div>
       <div class="toc-content active" id="tocContent">
         <div class="toc-list">
-          <a href="#investments">Select investments</a>
-          <a href="#team">Our team</a>
-          <a href="#help">How we help</a>
-          <a href="#faq">FAQ</a>
+          <a href="#investments" onclick="scrollToSection('investments'); return false;">Select investments</a>
+          <a href="#team" onclick="scrollToSection('team'); return false;">Our team</a>
+          <a href="#help" onclick="scrollToSection('help'); return false;">How we help</a>
+          <a href="#faq" onclick="scrollToSection('faq'); return false;">FAQ</a>
         </div>
       </div>
     </section>
@@ -437,6 +437,20 @@
         tocIcon.textContent = '▼';
       } else {
         tocIcon.textContent = '▶';
+      }
+    }
+
+    // Smooth scroll to section with offset to show header
+    function scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const navHeight = document.querySelector('.top-nav').offsetHeight;
+        const offsetPosition = element.offsetTop - navHeight - 20; // 20px extra padding
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
       }
     }
 
