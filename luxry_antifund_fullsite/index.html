@@ -226,6 +226,45 @@
       <p>Venture capital returns are driven by iconoclasts who win. Anti Fund's mission is to find and fund these people.</p>
     </section>
 
+    <!-- Table of Contents -->
+    <section class="table-of-contents">
+      <div class="toc-header" onclick="toggleTableOfContents()">
+        <span class="toc-icon">▼</span>
+        <span class="toc-title">Table of Contents</span>
+      </div>
+      <div class="toc-content" id="tocContent">
+        <ul class="toc-list">
+          <li><a href="#investments">Select investments</a></li>
+          <li>
+            <a href="#team">Our team</a>
+            <ul class="toc-sublist">
+              <li><a href="#jake-paul">Jake Paul</a></li>
+              <li><a href="#geoffrey-woo">Geoffrey Woo</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#help">How we help</a>
+            <ul class="toc-sublist">
+              <li><a href="#product">Product</a></li>
+              <li><a href="#go-to-market">Go-to-market</a></li>
+              <li><a href="#fundraising">Fundraising</a></li>
+              <li><a href="#strategic-inflection-points">Strategic inflection points</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#faq">FAQ</a>
+            <ul class="toc-sublist">
+              <li><a href="#what-stage">What stage do you focus on?</a></li>
+              <li><a href="#late-stage">Will you invest in late-stage rounds?</a></li>
+              <li><a href="#what-invest">What do you invest in?</a></li>
+              <li><a href="#check-size">What's your check size?</a></li>
+              <li><a href="#how-invest">How can I invest in the fund?</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <section class="investments" id="investments">
       <h2>Select investments</h2>
       <p>Anti Fund focuses on early-stage investments and advisory in AI; robotics; software and high-growth consumer companies with differentiated technology and/or distribution advantages. Anti Fund believes that companies that boldly challenge incumbents and break traditional paradigms are also the venture investments that generate the best financial returns.</p>
@@ -234,36 +273,36 @@
     <section class="team" id="team">
       <h2>Our team</h2>
       
-      <div class="team-member">
+      <div class="team-member" id="jake-paul">
         <h3>Jake Paul</h3>
         <p>Jake Paul is co-founder & managing partner of Anti Fund and a professional boxer. Jake holds the record for the most streamed sporting event in history with 65M peak concurrent streams (Paul vs Tyson on Netflix), was a top 5 most Googled athlete in 2024, and has 70M+ followers across social media. He is founder of Most Valuable Promotions, Betr, and W.</p>
       </div>
 
-      <div class="team-member">
+      <div class="team-member" id="geoffrey-woo">
         <h3>Geoffrey Woo</h3>
         <p>Geoffrey Woo is co-founder & managing partner of Anti Fund and an entrepreneur. He co-founded Archive, Ketone-IQ, and W. He previously founded and sold Glassmap (YC S11) to Groupon. He earned a BS with Honors & Distinction in Computer Science from Stanford University and is co-inventor and co-author of numerous US Patents and science papers.</p>
       </div>
     </section>
 
-    <section class="help">
+    <section class="help" id="help">
       <h2>How we help</h2>
       
-      <div class="help-item">
+      <div class="help-item" id="product">
         <h3>Product</h3>
         <p>Product relies on good taste. Our track record demonstrates taste, and we help founders find product-market fit and hyperscale it.</p>
       </div>
 
-      <div class="help-item">
+      <div class="help-item" id="go-to-market">
         <h3>Go-to-market</h3>
         <p>We help founders think through both marketing and distribution strategy as well as introductions to key partners.</p>
       </div>
 
-      <div class="help-item">
+      <div class="help-item" id="fundraising">
         <h3>Fundraising</h3>
         <p>We co-invest with the best investors and help with strategy, pitch prep, intros, and negotiations.</p>
       </div>
 
-      <div class="help-item">
+      <div class="help-item" id="strategic-inflection-points">
         <h3>Strategic inflection points</h3>
         <p>We've seen it all with board member dynamics, M&A, and pivots. Founders see us as trusted confidants.</p>
       </div>
@@ -272,27 +311,27 @@
     <section class="faq" id="faq">
       <h2>FAQ</h2>
       
-      <div class="faq-item">
+      <div class="faq-item" id="what-stage">
         <h3>What stage do you focus on?</h3>
         <p>We tend to invest at pre-seed or seed where we can maximize participation and support the inflection of the business.</p>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="late-stage">
         <h3>Will you invest in late-stage rounds?</h3>
         <p>If we believe in a 10x+ return profile and are excited about the product/market, we may consider it.</p>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="what-invest">
         <h3>What do you invest in?</h3>
         <p>We invest in high-growth AI, robotics, SaaS, and consumer companies with tech/distribution advantages.</p>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="check-size">
         <h3>What's your check size?</h3>
         <p>We invest between $250K-$500K, but have written checks as small as $50K and checks as large as $3M+. We are comfortable both leading and participating.</p>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="how-invest">
         <h3>How can I invest in the fund?</h3>
         <p>We're not raising right now, but do reach out to ir@antifund.com if you're interested in future funds.</p>
       </div>
@@ -409,12 +448,29 @@
       window.open(`mailto:?subject=${subject}&body=${body}`);
     }
 
+    // Table of Contents functionality
+    function toggleTableOfContents() {
+      const tocContent = document.getElementById('tocContent');
+      const tocIcon = document.querySelector('.toc-icon');
+      
+      tocContent.classList.toggle('active');
+      
+      // Rotate icon
+      if (tocContent.classList.contains('active')) {
+        tocIcon.textContent = '▲';
+      } else {
+        tocIcon.textContent = '▼';
+      }
+    }
+
     // Close modals on escape key
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape') {
         closeShareModal();
         closeCookieSettings();
         document.getElementById('dropdownMenu').classList.remove('show');
+        document.getElementById('tocContent').classList.remove('active');
+        document.querySelector('.toc-icon').textContent = '▼';
       }
     });
   </script>
