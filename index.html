@@ -19,13 +19,13 @@
       <span class="company-name">Anti Fund</span>
     </div>
     <div class="nav-right">
-      <button class="nav-btn search-btn" aria-label="Search">
+      <button class="nav-btn search-btn" aria-label="Search" onclick="openSearchModal()">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"></circle>
           <path d="m21 21-4.35-4.35"></path>
         </svg>
       </button>
-      <button class="nav-btn share-btn" aria-label="Share">
+      <button class="nav-btn share-btn" aria-label="Share" onclick="openShareModal()">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
           <polyline points="16,6 12,2 8,6"></polyline>
@@ -49,6 +49,46 @@
       </div>
     </div>
   </nav>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal" onclick="closeSearchModal(event)">
+    <div class="search-modal-content" onclick="event.stopPropagation()">
+      <button class="search-close" onclick="closeSearchModal()">&times;</button>
+      <h3>Search Anti Fund</h3>
+      <input type="text" class="search-input" placeholder="Search for team members, investments, FAQ..." onkeyup="performSearch(this.value)">
+      <div id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- Share Modal -->
+  <div class="share-modal" id="shareModal" onclick="closeShareModal(event)">
+    <div class="share-modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeShareModal()">&times;</button>
+      <h3>Share Anti Fund</h3>
+      <div class="share-options">
+        <a href="#" class="share-btn" onclick="shareToTwitter()">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+          </svg>
+          <span>X</span>
+        </a>
+        <a href="#" class="share-btn" onclick="shareToLinkedIn()">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <button class="share-btn" onclick="copyLink()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+          <span>Copy Link</span>
+        </button>
+      </div>
+      <input type="text" class="copy-link-input" id="copyLinkInput" readonly value="">
+    </div>
+  </div>
 
   <header>
     <img src="luxry_antifund_fullsite/assets/img/logo.png" alt="Anti Fund Logo" class="logo"/>
@@ -162,5 +202,107 @@
   <footer>
     <p>&copy; 2025. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Search functionality
+    function openSearchModal() {
+      document.getElementById('searchModal').classList.add('active');
+      document.querySelector('.search-input').focus();
+    }
+
+    function closeSearchModal(event) {
+      if (!event || event.target === document.getElementById('searchModal')) {
+        document.getElementById('searchModal').classList.remove('active');
+        document.querySelector('.search-input').value = '';
+        document.getElementById('searchResults').innerHTML = '';
+      }
+    }
+
+    function performSearch(query) {
+      const searchResults = document.getElementById('searchResults');
+      
+      if (query.length < 2) {
+        searchResults.innerHTML = '';
+        return;
+      }
+
+      const content = [
+        { title: 'Jake Paul', section: 'team', text: 'Co-founder & managing partner, professional boxer, Netflix record holder' },
+        { title: 'Geoffrey Woo', section: 'team', text: 'Co-founder & managing partner, entrepreneur, Stanford CS, Archive, Ketone-IQ' },
+        { title: 'Product', section: 'help', text: 'Product relies on good taste. We help founders find product-market fit' },
+        { title: 'Go-to-market', section: 'help', text: 'Marketing and distribution strategy, key partner introductions' },
+        { title: 'Fundraising', section: 'help', text: 'Co-invest with best investors, strategy, pitch prep, intros, negotiations' },
+        { title: 'AI & Robotics', section: 'investments', text: 'Early-stage investments in AI, robotics, software companies' },
+        { title: 'Check Size', section: 'faq', text: 'We invest between $250K-$500K, sometimes $50K to $3M+' },
+        { title: 'Investment Stage', section: 'faq', text: 'Pre-seed or seed stage where we can maximize participation' }
+      ];
+
+      const results = content.filter(item => 
+        item.title.toLowerCase().includes(query.toLowerCase()) ||
+        item.text.toLowerCase().includes(query.toLowerCase())
+      );
+
+      if (results.length > 0) {
+        searchResults.innerHTML = results.map(result => 
+          `<div style="padding: 12px; border-bottom: 1px solid #eee; cursor: pointer;" 
+           onclick="scrollToSection('${result.section}'); closeSearchModal();">
+             <strong>${result.title}</strong><br>
+             <small style="color: #666;">${result.text}</small>
+           </div>`
+        ).join('');
+      } else {
+        searchResults.innerHTML = '<div style="padding: 12px; color: #666;">No results found</div>';
+      }
+    }
+
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Share functionality
+    function openShareModal() {
+      document.getElementById('shareModal').classList.add('active');
+      document.getElementById('copyLinkInput').value = window.location.href;
+    }
+
+    function closeShareModal(event) {
+      if (!event || event.target === document.getElementById('shareModal')) {
+        document.getElementById('shareModal').classList.remove('active');
+      }
+    }
+
+    function shareToTwitter() {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent('Check out Anti Fund - venture capital for rebels founded by Jake Paul and Geoffrey Woo');
+      window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+    }
+
+    function shareToLinkedIn() {
+      const url = encodeURIComponent(window.location.href);
+      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+    }
+
+    function copyLink() {
+      const input = document.getElementById('copyLinkInput');
+      input.select();
+      input.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(input.value).then(() => {
+        const button = event.target.closest('.share-btn');
+        const originalText = button.querySelector('span').textContent;
+        button.querySelector('span').textContent = 'Copied!';
+        setTimeout(() => {
+          button.querySelector('span').textContent = originalText;
+        }, 2000);
+      });
+    }
+
+    // Close modals on escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeSearchModal();
+        closeShareModal();
+      }
+    });
+  </script>
 </body>
 </html>
