@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anti Fund</title>
+  <title>Resources - Luxry Capital</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -101,50 +100,55 @@
             </label>
           </div>
         </div>
-        
+
         <div class="cookie-item">
           <div class="cookie-item-content">
             <h4>Functional</h4>
-            <p>Used to remember preference selections and provide enhanced features.</p>
+            <p>Enhance site functionality and personalization.</p>
           </div>
           <div class="cookie-toggle">
-            <input type="checkbox" id="functional" checked>
+            <input type="checkbox" id="functional">
             <label for="functional" class="toggle-label">
               <span class="toggle-switch"></span>
             </label>
           </div>
         </div>
-        
+
         <div class="cookie-item">
           <div class="cookie-item-content">
             <h4>Analytics</h4>
-            <p>Used to measure usage and improve your experience.</p>
+            <p>Help us understand how visitors use our site.</p>
           </div>
           <div class="cookie-toggle">
-            <input type="checkbox" id="analytics" checked>
+            <input type="checkbox" id="analytics">
             <label for="analytics" class="toggle-label">
               <span class="toggle-switch"></span>
             </label>
           </div>
         </div>
-        
+
         <div class="cookie-item">
           <div class="cookie-item-content">
             <h4>Marketing</h4>
-            <p>Used for targeted advertising.</p>
+            <p>Used to track visitors and display relevant ads.</p>
           </div>
           <div class="cookie-toggle">
-            <input type="checkbox" id="marketing" checked>
+            <input type="checkbox" id="marketing">
             <label for="marketing" class="toggle-label">
               <span class="toggle-switch"></span>
             </label>
           </div>
         </div>
       </div>
+      
+      <div class="cookie-actions">
+        <button class="cookie-btn-secondary" onclick="closeCookieSettings()">Decline all</button>
+        <button class="cookie-btn-primary" onclick="closeCookieSettings()">Accept all</button>
+      </div>
     </div>
   </div>
 
-  <!-- Share Side Panel -->
+  <!-- Share Modal -->
   <div class="share-overlay" id="shareOverlay" onclick="closeShareModal()"></div>
   <div class="share-panel" id="sharePanel">
     <div class="share-panel-header">
@@ -201,13 +205,6 @@
             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
           </svg>
         </button>
-        
-        <button class="social-btn email-btn" onclick="shareToEmail()">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
-        </button>
       </div>
     </div>
   </div>
@@ -224,175 +221,109 @@
 
   <main>
     <section class="intro">
-      <h1>Anti Fund</h1>
-      <p class="tagline">ANTI FUND® is a venture capital firm founded by Jake Paul and Geoffrey Woo in 2021.</p>
+      <div class="back-link-container">
+        <a href="index.html" class="back-link">← Back to Anti Fund</a>
+      </div>
       
-      <p>Anti Fund believes the best founders are rebels, and the "anti" ethos resonates with the best engineers, scientists, and creators. Startups live and die on two levers: capital and attention. While capital is commodity, commanding attention is not. Whether a company sells consumer products or is a foundational research lab, they all must compete on the ability to win mindshare and ultimately customers and revenues.</p>
+      <h1>Search funds</h1>
+      <div class="article-meta">
+        <p><strong>Author:</strong> Nic Tan</p>
+        <p><strong>Read time:</strong> 10 minutes</p>
+        <p><strong>Published date:</strong> 1 Jan 2024</p>
+      </div>
       
-      <p>Venture capital returns are driven by iconoclasts who win. Anti Fund's mission is to find and fund these people.</p>
+      <p class="tagline">Learn what a search fund is and how it works as a private investment vehicle for entrepreneurs. We'll also cover how the search fund model works and how it compares to a traditional private equity fund.</p>
     </section>
 
     <!-- Table of Contents -->
     <section class="table-of-contents">
       <div class="toc-header" onclick="toggleTableOfContents()">
         <span class="toc-icon">▼</span>
-        <span class="toc-title">Table of Contents</span>
+        <span class="toc-title">Contents</span>
       </div>
       <div class="toc-content active" id="tocContent">
         <div class="toc-list">
-          <a href="#investments" onclick="scrollToSection('investments'); return false;">Select investments</a>
-          <a href="#team" onclick="scrollToSection('team'); return false;">Our team</a>
-          <a href="#help" onclick="scrollToSection('help'); return false;">How we help</a>
-          <a href="#faq" onclick="scrollToSection('faq'); return false;">FAQ</a>
+          <a href="#what-is-search-fund" onclick="scrollToSection('what-is-search-fund'); return false;">What is a search fund?</a>
+          <a href="#search-fund-model" onclick="scrollToSection('search-fund-model'); return false;">The search fund model: How do search funds work?</a>
+          <a href="#search-vs-pe" onclick="scrollToSection('search-vs-pe'); return false;">Search funds vs. traditional private equity</a>
+          <a href="#pros-and-cons" onclick="scrollToSection('pros-and-cons'); return false;">Pros and cons of search funds</a>
         </div>
       </div>
     </section>
 
-    <section class="investments" id="investments">
-      <h2>Select investments</h2>
-      <p>Anti Fund focuses on early-stage investments and advisory in AI; robotics; software and high-growth consumer companies with differentiated technology and/or distribution advantages. Anti Fund believes that companies that boldly challenge incumbents and break traditional paradigms are also the venture investments that generate the best financial returns.</p>
+    <section class="content-section" id="what-is-search-fund">
+      <h2>What is a search fund?</h2>
+      <p>A search fund is a type of private investment fund used by entrepreneurs who are seeking to acquire and take operating control of a small business. Unlike traditional private equity funds, which own multiple companies and operate in partnership with company leadership, the manager of a search fund (also referred to as a "search fund entrepreneur" or "searcher") acquires just one company and typically installs themself in a high-ranking role, such as CEO or president. Search funds fall under the category of entrepreneurship through acquisition (ETA) and are often used by entrepreneurs as a way to gain control of a company and shepherd its growth as an alternative to founding their own startup.</p>
     </section>
 
-    <section class="team" id="team">
-      <h2>Our team</h2>
+    <section class="content-section" id="search-fund-model">
+      <h2>The search fund model: How do search funds work?</h2>
+      <p>At a high level, search funds function in a similar way to venture capital funds and PE funds: The fund manager raises capital from investors and uses that capital to make an investment, with the goal of increasing the company's value, selling at a profit, and returning the proceeds to the original investors. But the details of this process are often specific to search funds.</p>
       
-      <div class="team-member" id="nic-tan">
-        <h3>Nic Tan</h3>
-        <p>Nic Tan is Principal at Luxry Capital, a private investment group focused on search / PE-style investments across Southeast Asia. With over a decade of operator experience, he has held leadership roles at high-growth companies navigating capital strategy, operational scale-ups, and regional expansion across sectors in property, consulting, agriculture, fintech, and new media. He now focuses on disciplined, PE-style acquisitions of SMEs and founder-led businesses with strong cash flows and structural upside.</p>
-      </div>
-    </section>
-
-    <section class="help" id="help">
-      <h2>How we help</h2>
+      <h3 id="raising-capital">Raising capital</h3>
+      <p>The manager of a search fund typically raises capital from other successful entrepreneurs and investors within their professional network. In many cases, search fund managers are MBA graduates.</p>
       
-      <div class="help-item" id="product">
-        <h3>Product</h3>
-        <p>Product relies on good taste. Our track record demonstrates taste, and we help founders find product-market fit and hyperscale it.</p>
-      </div>
-
-      <div class="help-item" id="go-to-market">
-        <h3>Go-to-market</h3>
-        <p>We help founders think through both marketing and distribution strategy as well as introductions to key partners.</p>
-      </div>
-
-      <div class="help-item" id="fundraising">
-        <h3>Fundraising</h3>
-        <p>We co-invest with the best investors and help with strategy, pitch prep, intros, and negotiations.</p>
-      </div>
-
-      <div class="help-item" id="strategic-inflection-points">
-        <h3>Strategic inflection points</h3>
-        <p>We've seen it all with board member dynamics, M&A, and pivots. Founders see us as trusted confidants.</p>
-      </div>
-    </section>
-
-    <section class="faq" id="faq">
-      <h2>FAQ</h2>
+      <p>Search fund investors often will agree to provide guidance to the fund manager in addition to capital. Some search funds might have a small handful of investors, while others might have many. The size of search funds can also vary, typically ranging from hundreds of thousands of dollars to a few million.</p>
       
-      <div class="faq-item" id="what-is-luxry">
-        <h3>What is Luxry Capital?</h3>
-        <p>Luxry Capital is a private investment group based in Singapore that specializes in acquiring and operating small to mid-sized businesses across Southeast Asia. We follow a search fund–driven private equity model, which means we raise capital, conduct a targeted acquisition search, acquire a business, and then operate it ourselves. Our focus is on companies with stable cashflows, succession potential, and platform growth opportunities.</p>
-        <p>We're not asset managers or passive investors. We're long-term operators who create value by running real businesses.</p>
-      </div>
-
-      <div class="faq-item" id="investment-philosophy">
-        <h3>What is your investment philosophy?</h3>
-        <p>Our investment philosophy centers on operational control, capital discipline, and long-term value creation. We acquire companies with proven revenue, healthy EBITDA, and structural inefficiencies that we can improve. We avoid high-burn or speculative models.</p>
-        <p>Instead of betting on innovation alone, we back durable business models with strong fundamentals, clear customer demand, and potential for system-level improvements. We believe that consistent execution beats hype every time.</p>
-      </div>
-
-      <div class="faq-item" id="search-fund">
-        <h3>What is a search fund?</h3>
-        <p>A search fund is a private equity model where capital is raised first to find a business to acquire, then to buy and operate that business long term. The key difference from traditional PE is that the acquirer, typically an entrepreneur or operator is directly involved in leading the business post-acquisition.</p>
-        <p>At Luxry Capital, we execute our own search fund. We raise capital from aligned investors, run the search internally, and step in as full-time owner-operators after the deal is closed. This model is growing rapidly in Southeast Asia due to increasing SME retirement and succession needs with rising demand for operationally focused investment strategies.</p>
-      </div>
-
-      <div class="faq-item" id="target-businesses">
-        <h3>What types of businesses do you target?</h3>
-        <p>We look for established SMEs (small and medium-sized enterprises) within Southeast Asia with:</p>
-        <ul>
-          <li>EBITDA between SGD 1M and 5M</li>
-          <li>Stable, recurring revenue streams</li>
-          <li>Clean books and efficient working capital</li>
-          <li>Industry tailwinds or consolidation potential</li>
-        </ul>
-        <p>Preferred sectors include:</p>
-        <ul>
-          <li>B2B services and distribution</li>
-          <li>Light manufacturing and contract operations</li>
-          <li>Vertical software and infrastructure-light tech</li>
-          <li>Legacy businesses ready for modernization</li>
-        </ul>
-      </div>
-
-      <div class="faq-item" id="founder-exit">
-        <h3>What should I do if I'm a founder looking to exit or sell my company?</h3>
-        <p>If you're a founder or business owner considering an exit, succession plan, or company sale, we'd like to speak with you.</p>
-        <p>Luxry Capital specializes in acquiring profitable, founder-led SMEs. We operate quietly, directly, and respectfully. There's no need for a formal pitch or broker introduction to get started.</p>
-        <p>Simply send a brief note to <a href="mailto:hello@luxrygroup.com">hello@luxrygroup.com</a> with a few details about your business—industry, size, current ownership—and we'll review confidentially. If there's a fit, we'll sign an NDA, conduct preliminary diligence, and move into structured discussions quickly.</p>
-        <p>We understand that exiting a business is about more than just price. We'll work with you to ensure continuity, care for your team, and preserve your legacy.</p>
-      </div>
-
-      <div class="faq-item" id="process-terms">
-        <h3>What's the process or terms like?</h3>
-        <p>We typically pursue full acquisitions, with a structured handover period ranging from a few months to one year. In cases where continuity or licensing is important, we may consider partial buyouts, with a minimum threshold of 90% ownership.</p>
-        <p>We always require some level of seller financing—not as a discounting tactic, but as a signal of alignment and mutual confidence. This helps structure a cleaner transaction and a smoother handover. Final terms are negotiated based on deal size, business complexity, and seller preferences.</p>
-      </div>
-
-      <div class="faq-item" id="co-investment">
-        <h3>Can I invest alongside Luxry Capital? What is your fundraising model?</h3>
-        <p>Yes. We operate a hybrid capital model:</p>
-        <ol>
-          <li>Committed capital pools for proprietary search fund initiatives</li>
-          <li>Private credit deal-by-deal co-investment opportunities for LPs, family offices, and strategic partners</li>
-        </ol>
-        <p>If you're seeking exposure to cashflow-driven private equity in Southeast Asia, we offer access to curated, operator-led transactions with clear reporting, execution visibility, and disciplined capital allocation.</p>
-        <p>To learn more about co-investment or LP participation, contact us at <a href="mailto:ir@luxrygroup.com">ir@luxrygroup.com</a>.</p>
-      </div>
-
-      <div class="faq-item" id="deal-referrals">
-        <h3>I'm an advisor or broker, can I refer a deal?</h3>
-        <p>Yes. We actively work with M&A advisors, deal brokers, and intermediaries across Southeast Asia and the United States.</p>
-        <p>We are particularly interested in:</p>
-        <ul>
-          <li>Off-market or lightly marketed SME opportunities</li>
-          <li>Founder-led companies with succession needs</li>
-          <li>Asset-light businesses with strong cashflows</li>
-        </ul>
-        <p>If you have a relevant deal or would like to introduce a seller, please email us at <a href="mailto:hello@luxrygroup.com">hello@luxrygroup.com</a>. We move quickly and structure fair referral arrangements.</p>
-      </div>
-
-      <div class="faq-item" id="careers">
-        <h3>I'm interested in working with Luxry Capital, are you hiring or open to operator partnerships?</h3>
-        <p>We don't run formal hiring cycles, but we're always open to meeting high-agency professionals who align with our mission. We welcome interest from:</p>
-        <ul>
-          <li>Finance, M&A, and strategy professionals</li>
-          <li>Post-MBA or ex-consulting talent with operating instincts</li>
-          <li>Industry specialists or advisors with commercial edge</li>
-          <li>Ex-founders or operators seeking to build within a search-style platform</li>
-        </ul>
-        <p>We also occasionally partner with co-operators, sector leads, and bolt-on partners for specific acquisitions. If you're interested in working with us, reach out at <a href="mailto:hr@luxrygroup.com">hr@luxrygroup.com</a>.</p>
-      </div>
-    </section>
-
-    <!-- Social Links -->
-    <section class="social-links">
-      <a href="https://instagram.com/antifund" target="_blank">Instagram</a>
-      <span>|</span>
-      <a href="resources.html" target="_blank">Resources</a>
-      <span>|</span>
-      <a href="legal.html" target="_blank">Legal</a>
-    </section>
-
-    <!-- Legal Section -->
-    <section class="legal" id="legal">
-      <p class="legal-disclaimer">
-        <em>Anti Fund is an equal opportunity employer and its members do not discriminate in employment matters on the basis of race, color, religion, gender, pregnancy, national origin, age, military service eligibility, veteran status, sexual orientation, marital status, disability, or any other legally protected characteristic.</em>
-      </p>
+      <h3 id="identifying-target">Identifying a target company</h3>
+      <p>At some point during or after the process of raising capital, a search fund begins searching for a company to acquire. This search process of finding and researching potential targets is similar to the investment due diligence process undergone at VC and PE firms.</p>
       
-      <p class="legal-disclaimer">
-        <em>The information on this website does not constitute an offer to, or solicitation of, any potential clients or investors for the provision by Anti Fund of investment management, advisory or any other related services. No material listed on this website is or should be construed as investment advice, nor is anything on this website an offer to sell, or a solicitation of an offer to buy, any security or other instrument.</em>
-      </p>
+      <p>While search funds can acquire any number of different companies, they are most frequently used to buy small businesses with strong revenue and growth metrics (e.g., cash flow, EBITDA, or ARR) that are seeking a change in management, perhaps because the current owner is looking to retire or liquidate their stake. Since search funds are used to acquire a single company, rather than several, they typically have a less defined investment sector focus than VC or PE funds.</p>
+      
+      <p>This search phase can be a drawn-out process, often lasting for many months or multiple years. Once a search fund identifies a target, the fund manager works with legal and financial advisers to negotiate terms of the acquisition and eventually finalize a deal.</p>
+      
+      <h3 id="managing-growing">Managing and growing the target company</h3>
+      <p>A search fund typically acquires a company with the idea of owning and operating the business for many years, often as long as a decade. This makes for a longer timeline than is typical in traditional VC and PE investments.</p>
+      
+      <p>The process of managing and growing a portfolio company (portco), however, can look quite similar for a search fund manager and other types of private fund managers. In each case, the fund manager might deploy any number of operating or financial strategies to improve the company's growth and revenue margins, including the addition of new business lines, the pursuit of new customers, major or minor pivots in strategy, or restructuring the company's debt.</p>
+      
+      <p>Since the fund manager typically installs themselves as CEO or to some other high-ranking position post-acquisition, they are fully empowered to pursue whatever strategies seem most likely to help grow the company's valuation.</p>
+      
+      <h3 id="exiting-investment">Exiting the investment</h3>
+      <p>After holding the target company for some period of time—usually at least five years, and sometimes more than 10—the manager of a search fund will typically pursue some kind of exit event that will allow them to distribute returns to the search fund's original investors. The motivations for exiting an investment from a search fund are the same as for exiting a portfolio company held by a VC or PE fund.</p>
+      
+      <p>The most likely exit pathways for these various fund types are similar, too. Like a VC fund or a PE fund, a search fund is most likely to exit its investment through an initial public offering (IPO) or an M&A transaction, such as a sale to a corporate buyer or a buyout with a private equity firm.</p>
+      
+      <p>Depending on the terms of the exit, the search fund manager may or may not retain some sort of leadership role at the target company, for example, they may hold a seat on the board of directors.</p>
+    </section>
+
+    <section class="content-section" id="search-vs-pe">
+      <h2>Search funds vs. traditional private equity</h2>
+      <p>A search fund is a type of private equity fund, in the sense that it raises capital from outside investors to acquire a stake in a privately held company. However, there are some significant differences between a typical search fund and the standard private equity investment vehicle.</p>
+      
+      <h3 id="portfolio-construction">Portfolio construction</h3>
+      <p>A search fund is used to acquire a single company. Most private equity funds, on the other hand, invest in many different companies. This means PE firms typically have some sort of cohesive strategy for how they will approach and manage multiple investments, which is not required of search funds.</p>
+      
+      <h3 id="fund-size">Fund size</h3>
+      <p>While both search funds and private equity funds can vary greatly in size, private equity vehicles are typically much larger. Many PE funds raise hundreds of millions or billions of dollars, while search funds are rarely larger than a few million dollars.</p>
+      
+      <h3 id="investment-size">Investment size</h3>
+      <p>On average, search funds pursue smaller investments than private equity funds. The price of search fund acquisitions is usually six, seven, or eight figures, while some PE funds pursue deals worth billions of dollars.</p>
+      
+      <h3 id="role-fund-manager">Role of the fund manager</h3>
+      <p>When a search fund entrepreneur makes an acquisition, they typically plan to act as an owner-operator by taking over as CEO or playing some other highly active role in the company's operations. When the manager of a PE fund makes an acquisition, they typically retain outside managers who are independent of the fund to run their portfolio companies.</p>
+      
+      <p>While PE fund managers often maintain close oversight over company management, the fund managers are not themselves responsible for day-to-day operations, as is the case with a search fund.</p>
+      
+      <h3 id="risk-profile">Risk profile and return potential</h3>
+      <p>Because a search fund invests in just one company, instead of many, the risk profile for LPs is more concentrated than it is for a private equity fund. However, this does not necessarily mean that any single search fund is inherently riskier than a single private equity fund. In both cases, the equation of potential risk and reward can vary widely on a fund-by-fund basis.</p>
+      
+      <p>By investing in companies with low revenue and the potential for rapid growth, some search funds attempt to produce venture-type returns, which can be higher than the typical return on a buyout of a more mature company. Some PE firms aim to produce higher returns in other ways, such as investing in distressed companies that carry an increased risk of financial failure.</p>
+    </section>
+
+    <section class="content-section" id="pros-and-cons">
+      <h2>Pros and cons of search funds</h2>
+      <p>The potential benefits and risks of search funds can be highly variable depending on the specific traits of the fund. In broad strokes, however, search funds tend to share certain pros and cons for entrepreneurs and investors:</p>
+      
+      <h3 id="search-fund-pros">Search fund pros</h3>
+      <p>For an entrepreneur, a search fund offers a path to gain control over a potentially high-growth company without having to build the company from scratch.</p>
+      
+      <p>For an investor, search funds provide the opportunity to invest in and support an entrepreneur who the investor believes can be successful as the operator of a single company. If the fund manager finds the right target company and successfully implements their strategy, a search fund can produce impressive returns on a relatively modest initial outlay of capital.</p>
+      
+      <h3 id="search-fund-cons">Search fund cons</h3>
+      <p>For an entrepreneur who's looking to grow a young business, acquiring a company through a search fund can require a much greater lump of initial capital than founding a company as a startup. While many startups are also expensive to run, they don't require an initial purchase.</p>
+      
+      <p>For an investor, search funds present a more concentrated risk profile than a traditional private equity fund, as covered above. If the target company fails, a search fund does not have other investments to help mitigate the loss. Search funds also tend to operate on longer timelines than venture capital and private equity funds. This means that investors' capital may be tied up for longer before they see any returns.</p>
     </section>
   </main>
 
@@ -442,46 +373,42 @@
     }
 
     function copyUrl() {
-      const input = document.getElementById('shareUrlInput');
-      input.select();
-      input.setSelectionRange(0, 99999);
-      navigator.clipboard.writeText(input.value).then(() => {
-        const button = event.target;
-        const originalText = button.innerHTML;
-        button.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>Copied!';
-        setTimeout(() => {
-          button.innerHTML = originalText;
-        }, 2000);
-      });
+      const urlInput = document.getElementById('shareUrlInput');
+      urlInput.select();
+      urlInput.setSelectionRange(0, 99999);
+      document.execCommand('copy');
+      
+      const button = document.querySelector('.copy-url-btn');
+      const originalText = button.innerHTML;
+      button.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"></polyline></svg>Copied!';
+      
+      setTimeout(() => {
+        button.innerHTML = originalText;
+      }, 2000);
     }
 
     function shareToLinkedIn() {
       const url = encodeURIComponent(window.location.href);
+      const title = encodeURIComponent('Search Funds - Luxry Capital');
+      const text = encodeURIComponent('Learn what a search fund is and how it works as a private investment vehicle for entrepreneurs.');
       window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
     }
 
     function shareToTwitter() {
       const url = encodeURIComponent(window.location.href);
-      const text = encodeURIComponent('Check out Anti Fund - venture capital for rebels founded by Jake Paul and Geoffrey Woo');
+      const text = encodeURIComponent('Learn what a search fund is and how it works as a private investment vehicle for entrepreneurs.');
       window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
     }
 
     function shareToWhatsApp() {
       const url = encodeURIComponent(window.location.href);
-      const text = encodeURIComponent('Check out Anti Fund - venture capital for rebels founded by Jake Paul and Geoffrey Woo');
-      window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+      const text = encodeURIComponent('Learn what a search fund is and how it works as a private investment vehicle for entrepreneurs.');
+      window.open(`https://wa.me/?text=${text} ${url}`, '_blank');
     }
 
     function shareToFacebook() {
       const url = encodeURIComponent(window.location.href);
       window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
-    }
-
-    function shareToEmail() {
-      const url = encodeURIComponent(window.location.href);
-      const subject = encodeURIComponent('Check out Anti Fund');
-      const body = encodeURIComponent('I thought you might be interested in Anti Fund - venture capital for rebels founded by Jake Paul and Geoffrey Woo.\n\n' + window.location.href);
-      window.open(`mailto:?subject=${subject}&body=${body}`);
     }
 
     // Table of Contents functionality
@@ -519,8 +446,6 @@
         closeShareModal();
         closeCookieSettings();
         document.getElementById('dropdownMenu').classList.remove('show');
-        document.getElementById('tocContent').classList.remove('active');
-        document.querySelector('.toc-icon').textContent = '▼';
       }
     });
   </script>

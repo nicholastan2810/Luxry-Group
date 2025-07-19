@@ -974,3 +974,38 @@ footer p {
   font-size: 14px;
   margin: 0;
 }
+
+/* Resources page styling */
+.back-link-container {
+  margin-bottom: 32px;
+}
+
+.back-link {
+  color: #007AFF;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.article-meta {
+  margin: 24px 0 32px 0;
+  border-left: 3px solid #007AFF;
+  padding-left: 16px;
+  background-color: #f8f9fa;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.article-meta p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.content-section {
+  margin-bottom: 48px;
+}
