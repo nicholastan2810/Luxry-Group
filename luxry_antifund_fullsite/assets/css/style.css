@@ -515,7 +515,7 @@ body {
 
 /* Banner */
 .banner {
-  height: 200px;
+  height: 380px;
   background-image: url('../img/Banner.png');
   background-size: cover;
   background-position: center;
@@ -961,7 +961,7 @@ footer p {
   }
   
   .banner {
-    height: 150px;
+    height: 380px;
   }
   
   .profile-container {
@@ -1050,7 +1050,7 @@ footer p {
   }
   
   .banner {
-    height: 120px;
+    height: 380px;
   }
   
   .profile-container {
