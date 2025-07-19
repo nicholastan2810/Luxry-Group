@@ -515,7 +515,7 @@ body {
 
 /* Banner */
 .banner {
-  height: 500px;
+  height: 380px;
   background-image: url('../img/Banner.png');
   background-size: cover;
   background-position: center;
@@ -787,9 +787,12 @@ section {
   font-size: 15px;
   line-height: 1.5;
   transition: color 0.2s ease;
-  display: block;
-  padding: 12px 0;
+
+  display: inline-block;
   border-bottom: 1px solid #e9ecef;
+
+  padding-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .toc-list a:hover {
