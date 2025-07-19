@@ -27,22 +27,122 @@
         </svg>
       </button>
       <div class="dropdown">
-        <button class="nav-btn dropdown-btn" aria-label="Menu">
+        <button class="nav-btn dropdown-btn" aria-label="Menu" onclick="toggleDropdown()">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="1"></circle>
             <circle cx="19" cy="12" r="1"></circle>
             <circle cx="5" cy="12" r="1"></circle>
           </svg>
         </button>
-        <div class="dropdown-content">
-          <a href="#team">Our Team</a>
-          <a href="#investments">Investments</a>
-          <a href="#faq">FAQ</a>
-          <a href="#legal">Legal</a>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="#" onclick="openCookieSettings()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"></path>
+            </svg>
+            Cookie settings
+          </a>
+          <a href="legal.html" target="_blank">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14,2 14,8 20,8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10,9 9,9 8,9"></polyline>
+            </svg>
+            Legal
+          </a>
         </div>
       </div>
     </div>
   </nav>
+
+  <!-- Cookie Settings Modal -->
+  <div class="cookie-overlay" id="cookieOverlay" onclick="closeCookieSettings()"></div>
+  <div class="cookie-modal" id="cookieModal">
+    <div class="cookie-modal-header">
+      <div class="cookie-header-left">
+        <button class="cookie-back" onclick="closeCookieSettings()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12,19 5,12 12,5"></polyline>
+          </svg>
+        </button>
+        <span class="cookie-report">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <circle cx="12" cy="17" r="1"></circle>
+          </svg>
+          Report page
+        </span>
+      </div>
+      <button class="cookie-close" onclick="closeCookieSettings()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="cookie-modal-content">
+      <h3>Cookie settings</h3>
+      
+      <div class="cookie-section">
+        <div class="cookie-item">
+          <div class="cookie-item-content">
+            <h4>Strictly necessary</h4>
+            <p>Essential for the site to function. Always On.</p>
+          </div>
+          <div class="cookie-toggle">
+            <input type="checkbox" id="necessary" checked disabled>
+            <label for="necessary" class="toggle-label">
+              <span class="toggle-switch"></span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="cookie-item">
+          <div class="cookie-item-content">
+            <h4>Functional</h4>
+            <p>Used to remember preference selections and provide enhanced features.</p>
+          </div>
+          <div class="cookie-toggle">
+            <input type="checkbox" id="functional" checked>
+            <label for="functional" class="toggle-label">
+              <span class="toggle-switch"></span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="cookie-item">
+          <div class="cookie-item-content">
+            <h4>Analytics</h4>
+            <p>Used to measure usage and improve your experience.</p>
+          </div>
+          <div class="cookie-toggle">
+            <input type="checkbox" id="analytics" checked>
+            <label for="analytics" class="toggle-label">
+              <span class="toggle-switch"></span>
+            </label>
+          </div>
+        </div>
+        
+        <div class="cookie-item">
+          <div class="cookie-item-content">
+            <h4>Marketing</h4>
+            <p>Used for targeted advertising.</p>
+          </div>
+          <div class="cookie-toggle">
+            <input type="checkbox" id="marketing" checked>
+            <label for="marketing" class="toggle-label">
+              <span class="toggle-switch"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Share Side Panel -->
   <div class="share-overlay" id="shareOverlay" onclick="closeShareModal()"></div>
@@ -206,7 +306,7 @@
       <span>/</span>
       <a href="https://linkedin.com/company/anti-fund" target="_blank">LinkedIn</a>
       <span>/</span>
-      <a href="#legal">Legal</a>
+      <a href="legal.html" target="_blank">Legal</a>
     </section>
 
     <!-- Legal Section -->
@@ -226,6 +326,34 @@
   </footer>
 
   <script>
+    // Dropdown functionality
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.classList.toggle('show');
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdown = document.getElementById('dropdownMenu');
+      const dropdownBtn = document.querySelector('.dropdown-btn');
+      
+      if (!dropdown.contains(event.target) && !dropdownBtn.contains(event.target)) {
+        dropdown.classList.remove('show');
+      }
+    });
+
+    // Cookie settings functionality
+    function openCookieSettings() {
+      document.getElementById('cookieOverlay').classList.add('active');
+      document.getElementById('cookieModal').classList.add('active');
+      document.getElementById('dropdownMenu').classList.remove('show');
+    }
+
+    function closeCookieSettings() {
+      document.getElementById('cookieOverlay').classList.remove('active');
+      document.getElementById('cookieModal').classList.remove('active');
+    }
+
     // Share functionality
     function openShareModal() {
       document.getElementById('shareOverlay').classList.add('active');
@@ -281,10 +409,12 @@
       window.open(`mailto:?subject=${subject}&body=${body}`);
     }
 
-    // Close panel on escape key
+    // Close modals on escape key
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape') {
         closeShareModal();
+        closeCookieSettings();
+        document.getElementById('dropdownMenu').classList.remove('show');
       }
     });
   </script>
