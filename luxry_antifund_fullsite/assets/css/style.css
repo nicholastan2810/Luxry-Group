@@ -577,6 +577,8 @@ h2 {
   margin: 48px 0 24px 0;
   color: #000;
   letter-spacing: -0.01em;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e9ecef;
 }
 
 h3 {
@@ -586,6 +588,8 @@ h3 {
   margin: 32px 0 12px 0;
   color: #000;
   letter-spacing: -0.005em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e9ecef;
 }
 
 p {
@@ -636,10 +640,7 @@ section {
   display: flex;
   gap: 24px;
   margin-bottom: 32px;
-  padding: 24px;
-  border: 1px solid #e9ecef;
-  border-radius: 12px;
-  background-color: #fafafa;
+  padding: 0;
   align-items: flex-start;
 }
 
@@ -690,7 +691,7 @@ section {
   .investment-item {
     flex-direction: column;
     gap: 16px;
-    padding: 20px;
+    padding: 0;
   }
   
   .investment-logo {
@@ -806,26 +807,21 @@ section {
 /* FAQ section styling */
 .faq-item {
   margin-bottom: 24px;
-  border: 1px solid #e9ecef;
-  border-radius: 8px;
-  overflow: hidden;
 }
 
 .faq-question {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 20px;
+  padding: 0;
   margin: 0;
-  background-color: #fafafa;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: color 0.2s ease;
   user-select: none;
-  border-bottom: 1px solid #e9ecef;
 }
 
 .faq-question:hover {
-  background-color: #f0f0f0;
+  color: #666;
 }
 
 .faq-icon {
@@ -841,8 +837,8 @@ section {
 
 .faq-answer {
   display: none;
-  padding: 20px;
-  background-color: #ffffff;
+  padding: 0;
+  margin-top: 16px;
 }
 
 .faq-answer.active {
