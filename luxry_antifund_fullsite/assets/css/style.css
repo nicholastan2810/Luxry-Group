@@ -938,4 +938,29 @@ footer p {
   .legal-disclaimer {
     font-size: 13px;
   }
+  
+  footer {
+    padding: 40px 24px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 40px 20px 40px;
+  }
+}
+
+/* Footer */
+footer {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 40px 60px;
+  background-color: #ffffff;
+}
+
+footer p {
+  text-align: left;
+  color: #666;
+  font-size: 14px;
+  margin: 0;
 }
