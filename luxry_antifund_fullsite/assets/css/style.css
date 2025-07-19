@@ -560,6 +560,16 @@ h1 {
   letter-spacing: -0.02em;
 }
 
+ul, ol {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
 h2 {
   font-size: 32px;
   font-weight: 600;
