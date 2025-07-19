@@ -1010,6 +1010,21 @@ footer p {
   margin-bottom: 48px;
 }
 
+/* Article hero image */
+.article-hero-image {
+  margin: 48px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.article-hero-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
 /* Resources grid styling */
 .resources-grid {
   display: grid;
@@ -1050,6 +1065,16 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.resource-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .resource-placeholder-image {
@@ -1183,5 +1208,9 @@ footer p {
   
   .resource-card p {
     font-size: 14px;
+  }
+  
+  .article-hero-image img {
+    height: 250px;
   }
 }
