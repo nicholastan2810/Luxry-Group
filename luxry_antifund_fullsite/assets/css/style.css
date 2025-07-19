@@ -516,10 +516,7 @@ body {
 /* Banner */
 .banner {
   height: 380px;
-  background-image: url('../img/Banner.png');
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #808080;
   width: 100%;
   border-bottom: 2px solid #e0e0e0;
 }
