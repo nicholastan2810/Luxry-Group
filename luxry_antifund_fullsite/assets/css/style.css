@@ -530,7 +530,7 @@ body {
   display: flex;
   justify-content: flex-start;
   max-width: 680px;
-  margin: -80px auto 60px auto; /* Position logo to straddle banner/content border and center container */
+  margin: -100px auto 60px auto; /* Position logo to straddle banner/content border and center container */
   padding-left: 40px; /* Match main content padding */
   z-index: 10;
 }
@@ -964,12 +964,12 @@ footer p {
   }
   
   .banner {
-    height: 150px;
+    height: 285px;
   }
   
   .profile-container {
     padding-left: 24px; /* Match main responsive padding */
-    margin: -60px auto 40px auto;
+    margin: -80px auto 40px auto;
   }
   
   .profile-picture {
@@ -1053,12 +1053,12 @@ footer p {
   }
   
   .banner {
-    height: 120px;
+    height: 228px;
   }
   
   .profile-container {
     padding-left: 20px; /* Match main responsive padding */
-    margin: -50px auto 30px auto;
+    margin: -70px auto 30px auto;
   }
   
   .profile-picture {
