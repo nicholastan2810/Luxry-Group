@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 11px 24px;
+  padding: 10px 24px;
   background-color: #ffffff;
   border-bottom: 1px solid #eee;
   position: sticky;
@@ -34,8 +34,8 @@ body {
 }
 
 .nav-favicon {
-  width: 10px;
-  height: 10px;
+  width: 24px;
+  height: 24px;
   border-radius: 4px;
 }
 
@@ -930,7 +930,7 @@ footer p {
 /* Responsive design */
 @media (max-width: 768px) {
   .top-nav {
-    padding: 9px 16px;
+    padding: 8px 16px;
   }
   
   .nav-left {
@@ -942,8 +942,8 @@ footer p {
   }
   
   .nav-favicon {
-    width: 8px;
-    height: 8px;
+    width: 20px;
+    height: 20px;
   }
   
   .nav-btn {
@@ -1015,7 +1015,7 @@ footer p {
 
 @media (max-width: 480px) {
   .top-nav {
-    padding: 7px 12px;
+    padding: 6px 12px;
   }
   
   .nav-left {
@@ -1027,8 +1027,8 @@ footer p {
   }
   
   .nav-favicon {
-    width: 6px;
-    height: 6px;
+    width: 18px;
+    height: 18px;
   }
   
   .nav-btn {
