@@ -1371,3 +1371,13 @@ footer p {
     height: 250px;
   }
 }
+
+/* Email domain styling */
+.email-link {
+  color: #007AFF;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
