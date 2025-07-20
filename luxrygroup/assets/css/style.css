@@ -791,7 +791,7 @@ section {
   line-height: 1.5;
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
 
-  display: block;
+  display: inline;
   margin-bottom: 8px;
 }
 

@@ -1,0 +1,25 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Handle clean URLs for main pages
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^legal$ legal.html [L]
+RewriteRule ^resources$ resources.html [L]
+RewriteRule ^search-funds$ search-funds.html [L]
+
+# Handle luxrygroup subdirectory clean URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^luxrygroup/([^.]+)$ luxrygroup/$1.html [L]
+
+# Redirect .html URLs to clean URLs
+RewriteCond %{THE_REQUEST} \s/+(.*)\.html[\s?] [NC]
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# Handle root index
+DirectoryIndex index.html
+
+# Force HTTPS (optional)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
