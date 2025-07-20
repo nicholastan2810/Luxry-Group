@@ -8,7 +8,12 @@ RewriteRule ^legal$ legal.html [L]
 RewriteRule ^resources$ resources.html [L]
 RewriteRule ^search-funds$ search-funds.html [L]
 
-# Handle luxrygroup subdirectory clean URLs
+# Handle resources subdirectory clean URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^resources/([^.]+)$ resources/$1.html [L]
+
+# Handle luxrygroup subdirectory clean URLs (legacy support)
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^luxrygroup/([^.]+)$ luxrygroup/$1.html [L]
