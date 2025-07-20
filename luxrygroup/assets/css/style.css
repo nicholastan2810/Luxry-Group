@@ -515,8 +515,8 @@ body {
 
 /* Banner */
 .banner {
-  height: 380px;
-  background-image: url('../img/Banner.png');
+  height: 300px;
+  background-image: url('../img/Banner1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
