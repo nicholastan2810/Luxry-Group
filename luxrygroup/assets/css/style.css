@@ -556,7 +556,7 @@ main {
 
 /* Typography */
 h1 {
-  font-size: 46px;
+  font-size: 38px;
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 24px;
@@ -575,7 +575,7 @@ li {
 }
 
 h2 {
-  font-size: 31px;
+  font-size: 30px;
   font-weight: 600;
   line-height: 1.2;
   margin: 48px 0 24px 0;
@@ -614,7 +614,7 @@ section {
 }
 
 .intro h1 {
-  font-size: 54px;
+  font-size: 38px;
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 32px;
@@ -633,7 +633,7 @@ section {
 
 @media (max-width: 768px) {
   .intro h1 {
-    font-size: 38px;
+    font-size: 27px;
   }
 }
 
@@ -981,12 +981,12 @@ footer p {
   }
   
   h1 {
-    font-size: 34px;
+    font-size: 28px;
     margin-bottom: 20px;
   }
   
   h2 {
-    font-size: 27px;
+    font-size: 26px;
     margin: 40px 0 20px 0;
   }
   
@@ -1070,12 +1070,12 @@ footer p {
   }
   
   h1 {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 1.1;
   }
   
   h2 {
-    font-size: 23px;
+    font-size: 22px;
     margin: 36px 0 16px 0;
   }
   
