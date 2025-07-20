@@ -41,7 +41,7 @@
             </svg>
             Cookie settings
           </a>
-          <a href="legal.html" target="_blank">
+          <a href="/legal" target="_blank">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
               <polyline points="14,2 14,8 20,8"></polyline>
@@ -222,138 +222,113 @@
   <main>
     <section class="intro">
       <div class="back-link-container">
-        <a href="index.html" class="back-link">← Back to Luxry Capital</a>
+        <a href="/resources" class="back-link">← Back to Resources</a>
       </div>
       
-      <h1>Resources</h1>
-      <p class="tagline">Educational content to help you navigate the world of private equity, acquisitions, and business operations.</p>
+      <h1>Search funds</h1>
+      <div class="article-meta">
+        <p><strong>Author:</strong> Nic Tan</p>
+        <p><strong>Read time:</strong> 10 minutes</p>
+        <p><strong>Published date:</strong> 1 Jan 2024</p>
+      </div>
+      
+      <p class="tagline">Learn what a search fund is and how it works as a private investment vehicle for entrepreneurs. We'll also cover how the search fund model works and how it compares to a traditional private equity fund.</p>
     </section>
 
-    <!-- Resources Grid -->
-    <section class="resources-grid">
-      <article class="resource-card" onclick="window.location.href='search-funds.html'">
-        <div class="resource-image">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=200&fit=crop&crop=faces" alt="Search funds - Professional meeting" />
+    <!-- Table of Contents -->
+    <section class="table-of-contents">
+      <div class="toc-header" onclick="toggleTableOfContents()">
+        <span class="toc-icon">▼</span>
+        <span class="toc-title">Contents</span>
+      </div>
+      <div class="toc-content active" id="tocContent">
+        <div class="toc-list">
+          <a href="#what-is-search-fund" onclick="scrollToSection('what-is-search-fund'); return false;">What is a search fund?</a>
+          <a href="#search-fund-model" onclick="scrollToSection('search-fund-model'); return false;">The search fund model: How do search funds work?</a>
+          <a href="#search-vs-pe" onclick="scrollToSection('search-vs-pe'); return false;">Search funds vs. traditional private equity</a>
+          <a href="#pros-and-cons" onclick="scrollToSection('pros-and-cons'); return false;">Pros and cons of search funds</a>
         </div>
-        <div class="resource-content">
-          <div class="resource-category">PRIVATE EQUITY</div>
-          <h3>Search funds</h3>
-          <p>Learn what a search fund is and how it works as a private investment vehicle for entrepreneurs.</p>
-          <div class="resource-author">
-            <div class="author-avatar">NT</div>
-            <span>BY NIC TAN</span>
-          </div>
-        </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="resource-card coming-soon">
-        <div class="resource-image">
-          <div class="resource-placeholder-image due-diligence">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14,2 14,8 20,8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10,9 9,9 8,9"></polyline>
-            </svg>
-          </div>
-        </div>
-        <div class="resource-content">
-          <div class="resource-category">DUE DILIGENCE</div>
-          <h3>SME Acquisition Due Diligence Guide</h3>
-          <p>A comprehensive framework for evaluating small and medium enterprises before acquisition.</p>
-          <div class="resource-author">
-            <div class="author-avatar">NT</div>
-            <span>BY NIC TAN</span>
-          </div>
-          <div class="coming-soon-badge">Coming Soon</div>
-        </div>
-      </article>
+    <!-- Article Hero Image -->
+    <section class="article-hero-image">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop&crop=faces" alt="Search funds - Professional meeting" />
+    </section>
 
-      <article class="resource-card coming-soon">
-        <div class="resource-image">
-          <div class="resource-placeholder-image operations">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="resource-content">
-          <div class="resource-category">OPERATIONS</div>
-          <h3>Post-Acquisition Value Creation</h3>
-          <p>Strategic approaches to improve operations and drive growth after acquiring a business.</p>
-          <div class="resource-author">
-            <div class="author-avatar">NT</div>
-            <span>BY NIC TAN</span>
-          </div>
-          <div class="coming-soon-badge">Coming Soon</div>
-        </div>
-      </article>
+    <section class="content-section" id="what-is-search-fund">
+      <h2>What is a search fund?</h2>
+      <p>A search fund is a type of private investment fund used by entrepreneurs who are seeking to acquire and take operating control of a small business. Unlike traditional private equity funds, which own multiple companies and operate in partnership with company leadership, the manager of a search fund (also referred to as a "search fund entrepreneur" or "searcher") acquires just one company and typically installs themself in a high-ranking role, such as CEO or president. Search funds fall under the category of entrepreneurship through acquisition (ETA) and are often used by entrepreneurs as a way to gain control of a company and shepherd its growth as an alternative to founding their own startup.</p>
+    </section>
 
-      <article class="resource-card coming-soon">
-        <div class="resource-image">
-          <div class="resource-placeholder-image market-analysis">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="18" y1="20" x2="18" y2="10"></line>
-              <line x1="12" y1="20" x2="12" y2="4"></line>
-              <line x1="6" y1="20" x2="6" y2="14"></line>
-            </svg>
-          </div>
-        </div>
-        <div class="resource-content">
-          <div class="resource-category">MARKET ANALYSIS</div>
-          <h3>Southeast Asian SME Market Trends</h3>
-          <p>Insights into market dynamics, opportunities, and challenges in the ASEAN business landscape.</p>
-          <div class="resource-author">
-            <div class="author-avatar">NT</div>
-            <span>BY NIC TAN</span>
-          </div>
-          <div class="coming-soon-badge">Coming Soon</div>
-        </div>
-      </article>
+    <section class="content-section" id="search-fund-model">
+      <h2>The search fund model: How do search funds work?</h2>
+      <p>At a high level, search funds function in a similar way to venture capital funds and PE funds: The fund manager raises capital from investors and uses that capital to make an investment, with the goal of increasing the company's value, selling at a profit, and returning the proceeds to the original investors. But the details of this process are often specific to search funds.</p>
+      
+      <h3 id="raising-capital">Raising capital</h3>
+      <p>The manager of a search fund typically raises capital from other successful entrepreneurs and investors within their professional network. In many cases, search fund managers are MBA graduates.</p>
+      
+      <p>Search fund investors often will agree to provide guidance to the fund manager in addition to capital. Some search funds might have a small handful of investors, while others might have many. The size of search funds can also vary, typically ranging from hundreds of thousands of dollars to a few million.</p>
+      
+      <h3 id="identifying-target">Identifying a target company</h3>
+      <p>At some point during or after the process of raising capital, a search fund begins searching for a company to acquire. This search process of finding and researching potential targets is similar to the investment due diligence process undergone at VC and PE firms.</p>
+      
+      <p>While search funds can acquire any number of different companies, they are most frequently used to buy small businesses with strong revenue and growth metrics (e.g., cash flow, EBITDA, or ARR) that are seeking a change in management, perhaps because the current owner is looking to retire or liquidate their stake. Since search funds are used to acquire a single company, rather than several, they typically have a less defined investment sector focus than VC or PE funds.</p>
+      
+      <p>This search phase can be a drawn-out process, often lasting for many months or multiple years. Once a search fund identifies a target, the fund manager works with legal and financial advisers to negotiate terms of the acquisition and eventually finalize a deal.</p>
+      
+      <h3 id="managing-growing">Managing and growing the target company</h3>
+      <p>A search fund typically acquires a company with the idea of owning and operating the business for many years, often as long as a decade. This makes for a longer timeline than is typical in traditional VC and PE investments.</p>
+      
+      <p>The process of managing and growing a portfolio company (portco), however, can look quite similar for a search fund manager and other types of private fund managers. In each case, the fund manager might deploy any number of operating or financial strategies to improve the company's growth and revenue margins, including the addition of new business lines, the pursuit of new customers, major or minor pivots in strategy, or restructuring the company's debt.</p>
+      
+      <p>Since the fund manager typically installs themselves as CEO or to some other high-ranking position post-acquisition, they are fully empowered to pursue whatever strategies seem most likely to help grow the company's valuation.</p>
+      
+      <h3 id="exiting-investment">Exiting the investment</h3>
+      <p>After holding the target company for some period of time—usually at least five years, and sometimes more than 10—the manager of a search fund will typically pursue some kind of exit event that will allow them to distribute returns to the search fund's original investors. The motivations for exiting an investment from a search fund are the same as for exiting a portfolio company held by a VC or PE fund.</p>
+      
+      <p>The most likely exit pathways for these various fund types are similar, too. Like a VC fund or a PE fund, a search fund is most likely to exit its investment through an initial public offering (IPO) or an M&A transaction, such as a sale to a corporate buyer or a buyout with a private equity firm.</p>
+      
+      <p>Depending on the terms of the exit, the search fund manager may or may not retain some sort of leadership role at the target company, for example, they may hold a seat on the board of directors.</p>
+    </section>
 
-      <article class="resource-card coming-soon">
-        <div class="resource-image">
-          <div class="resource-placeholder-image exit-strategies">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 11l3 3l8-8"></path>
-              <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="resource-content">
-          <div class="resource-category">EXIT STRATEGIES</div>
-          <h3>Planning Your Business Exit</h3>
-          <p>Understanding different exit pathways and how to maximize value when selling your business.</p>
-          <div class="resource-author">
-            <div class="author-avatar">NT</div>
-            <span>BY NIC TAN</span>
-          </div>
-          <div class="coming-soon-badge">Coming Soon</div>
-        </div>
-      </article>
+    <section class="content-section" id="search-vs-pe">
+      <h2>Search funds vs. traditional private equity</h2>
+      <p>A search fund is a type of private equity fund, in the sense that it raises capital from outside investors to acquire a stake in a privately held company. However, there are some significant differences between a typical search fund and the standard private equity investment vehicle.</p>
+      
+      <h3 id="portfolio-construction">Portfolio construction</h3>
+      <p>A search fund is used to acquire a single company. Most private equity funds, on the other hand, invest in many different companies. This means PE firms typically have some sort of cohesive strategy for how they will approach and manage multiple investments, which is not required of search funds.</p>
+      
+      <h3 id="fund-size">Fund size</h3>
+      <p>While both search funds and private equity funds can vary greatly in size, private equity vehicles are typically much larger. Many PE funds raise hundreds of millions or billions of dollars, while search funds are rarely larger than a few million dollars.</p>
+      
+      <h3 id="investment-size">Investment size</h3>
+      <p>On average, search funds pursue smaller investments than private equity funds. The price of search fund acquisitions is usually six, seven, or eight figures, while some PE funds pursue deals worth billions of dollars.</p>
+      
+      <h3 id="role-fund-manager">Role of the fund manager</h3>
+      <p>When a search fund entrepreneur makes an acquisition, they typically plan to act as an owner-operator by taking over as CEO or playing some other highly active role in the company's operations. When the manager of a PE fund makes an acquisition, they typically retain outside managers who are independent of the fund to run their portfolio companies.</p>
+      
+      <p>While PE fund managers often maintain close oversight over company management, the fund managers are not themselves responsible for day-to-day operations, as is the case with a search fund.</p>
+      
+      <h3 id="risk-profile">Risk profile and return potential</h3>
+      <p>Because a search fund invests in just one company, instead of many, the risk profile for LPs is more concentrated than it is for a private equity fund. However, this does not necessarily mean that any single search fund is inherently riskier than a single private equity fund. In both cases, the equation of potential risk and reward can vary widely on a fund-by-fund basis.</p>
+      
+      <p>By investing in companies with low revenue and the potential for rapid growth, some search funds attempt to produce venture-type returns, which can be higher than the typical return on a buyout of a more mature company. Some PE firms aim to produce higher returns in other ways, such as investing in distressed companies that carry an increased risk of financial failure.</p>
+    </section>
 
-      <article class="resource-card coming-soon">
-        <div class="resource-image">
-          <div class="resource-placeholder-image legal-structures">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 9l9-7l9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-              <polyline points="9,22 9,12 15,12 15,22"></polyline>
-            </svg>
-          </div>
-        </div>
-        <div class="resource-content">
-          <div class="resource-category">LEGAL & STRUCTURES</div>
-          <h3>Cross-Border M&A in Southeast Asia</h3>
-          <p>Navigating legal frameworks, regulations, and structures for international business acquisitions.</p>
-          <div class="resource-author">
-            <div class="author-avatar">NT</div>
-            <span>BY NIC TAN</span>
-          </div>
-          <div class="coming-soon-badge">Coming Soon</div>
-        </div>
-      </article>
+    <section class="content-section" id="pros-and-cons">
+      <h2>Pros and cons of search funds</h2>
+      <p>The potential benefits and risks of search funds can be highly variable depending on the specific traits of the fund. In broad strokes, however, search funds tend to share certain pros and cons for entrepreneurs and investors:</p>
+      
+      <h3 id="search-fund-pros">Search fund pros</h3>
+      <p>For an entrepreneur, a search fund offers a path to gain control over a potentially high-growth company without having to build the company from scratch.</p>
+      
+      <p>For an investor, search funds provide the opportunity to invest in and support an entrepreneur who the investor believes can be successful as the operator of a single company. If the fund manager finds the right target company and successfully implements their strategy, a search fund can produce impressive returns on a relatively modest initial outlay of capital.</p>
+      
+      <h3 id="search-fund-cons">Search fund cons</h3>
+      <p>For an entrepreneur who's looking to grow a young business, acquiring a company through a search fund can require a much greater lump of initial capital than founding a company as a startup. While many startups are also expensive to run, they don't require an initial purchase.</p>
+      
+      <p>For an investor, search funds present a more concentrated risk profile than a traditional private equity fund, as covered above. If the target company fails, a search fund does not have other investments to help mitigate the loss. Search funds also tend to operate on longer timelines than venture capital and private equity funds. This means that investors' capital may be tied up for longer before they see any returns.</p>
     </section>
   </main>
 
@@ -419,26 +394,55 @@
 
     function shareToLinkedIn() {
       const url = encodeURIComponent(window.location.href);
-      const title = encodeURIComponent('Resources - Luxry Capital');
-      const text = encodeURIComponent('Educational content to help you navigate the world of private equity, acquisitions, and business operations.');
+      const title = encodeURIComponent('Search Funds - Luxry Capital');
+      const text = encodeURIComponent('Learn what a search fund is and how it works as a private investment vehicle for entrepreneurs.');
       window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
     }
 
     function shareToTwitter() {
       const url = encodeURIComponent(window.location.href);
-      const text = encodeURIComponent('Educational content to help you navigate the world of private equity, acquisitions, and business operations.');
+      const text = encodeURIComponent('Learn what a search fund is and how it works as a private investment vehicle for entrepreneurs.');
       window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
     }
 
     function shareToWhatsApp() {
       const url = encodeURIComponent(window.location.href);
-      const text = encodeURIComponent('Educational content to help you navigate the world of private equity, acquisitions, and business operations.');
+      const text = encodeURIComponent('Learn what a search fund is and how it works as a private investment vehicle for entrepreneurs.');
       window.open(`https://wa.me/?text=${text} ${url}`, '_blank');
     }
 
     function shareToFacebook() {
       const url = encodeURIComponent(window.location.href);
       window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+    }
+
+    // Table of Contents functionality
+    function toggleTableOfContents() {
+      const tocContent = document.getElementById('tocContent');
+      const tocIcon = document.querySelector('.toc-icon');
+      
+      tocContent.classList.toggle('active');
+      
+      // Update icon based on state
+      if (tocContent.classList.contains('active')) {
+        tocIcon.textContent = '▼';
+      } else {
+        tocIcon.textContent = '▶';
+      }
+    }
+
+    // Smooth scroll to section with offset to show header
+    function scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const navHeight = document.querySelector('.top-nav').offsetHeight;
+        const offsetPosition = element.offsetTop - navHeight - 20; // 20px extra padding
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     }
 
     // Close modals on escape key
