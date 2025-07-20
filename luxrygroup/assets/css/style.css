@@ -66,7 +66,7 @@ body {
 
 .nav-btn:hover {
   background-color: #f5f5f5;
-  color: #917434;
+  color: #333;
 }
 
 /* Dropdown Menu */
@@ -436,7 +436,7 @@ body {
 }
 
 .copy-url-btn:hover {
-  background-color: #917434;
+  background-color: #0056D2;
 }
 
 .share-social {
