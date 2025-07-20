@@ -468,9 +468,9 @@ body {
 }
 
 .linkedin-btn:hover {
-  background-color: #917434;
+  background-color: #0077B5;
   color: white;
-  border-color: #917434;
+  border-color: #0077B5;
 }
 
 .twitter-btn {
@@ -478,9 +478,9 @@ body {
 }
 
 .twitter-btn:hover {
-  background-color: #917434;
+  background-color: #1DA1F2;
   color: white;
-  border-color: #917434;
+  border-color: #1DA1F2;
 }
 
 .whatsapp-btn {
@@ -488,9 +488,9 @@ body {
 }
 
 .whatsapp-btn:hover {
-  background-color: #917434;
+  background-color: #25D366;
   color: white;
-  border-color: #917434;
+  border-color: #25D366;
 }
 
 .facebook-btn {
@@ -498,9 +498,9 @@ body {
 }
 
 .facebook-btn:hover {
-  background-color: #917434;
+  background-color: #1877F2;
   color: white;
-  border-color: #917434;
+  border-color: #1877F2;
 }
 
 .email-btn {
@@ -508,9 +508,9 @@ body {
 }
 
 .email-btn:hover {
-  background-color: #917434;
+  background-color: #666;
   color: white;
-  border-color: #917434;
+  border-color: #666;
 }
 
 /* Banner */
