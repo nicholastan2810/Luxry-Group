@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
+  padding: 11px 24px;
   background-color: #ffffff;
   border-bottom: 1px solid #eee;
   position: sticky;
@@ -930,7 +930,7 @@ footer p {
 /* Responsive design */
 @media (max-width: 768px) {
   .top-nav {
-    padding: 10px 16px;
+    padding: 9px 16px;
   }
   
   .nav-left {
@@ -1015,7 +1015,7 @@ footer p {
 
 @media (max-width: 480px) {
   .top-nav {
-    padding: 8px 12px;
+    padding: 7px 12px;
   }
   
   .nav-left {

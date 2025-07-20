@@ -369,7 +369,7 @@
     function openShareModal() {
       document.getElementById('shareOverlay').classList.add('active');
       document.getElementById('sharePanel').classList.add('active');
-      document.getElementById('shareUrlInput').value = window.location.href;
+              document.getElementById('shareUrlInput').value = window.location.origin + window.location.pathname;
     }
 
     function closeShareModal() {
@@ -393,26 +393,26 @@
     }
 
     function shareToLinkedIn() {
-      const url = encodeURIComponent(window.location.href);
+      const url = encodeURIComponent(window.location.origin + window.location.pathname);
       const title = encodeURIComponent('Search Funds - Luxry Capital');
       const text = encodeURIComponent('Learn what a search fund is and how it works as a private investment vehicle for entrepreneurs.');
       window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
     }
 
     function shareToTwitter() {
-      const url = encodeURIComponent(window.location.href);
+      const url = encodeURIComponent(window.location.origin + window.location.pathname);
       const text = encodeURIComponent('Learn what a search fund is and how it works as a private investment vehicle for entrepreneurs.');
       window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
     }
 
     function shareToWhatsApp() {
-      const url = encodeURIComponent(window.location.href);
+      const url = encodeURIComponent(window.location.origin + window.location.pathname);
       const text = encodeURIComponent('Learn what a search fund is and how it works as a private investment vehicle for entrepreneurs.');
       window.open(`https://wa.me/?text=${text} ${url}`, '_blank');
     }
 
     function shareToFacebook() {
-      const url = encodeURIComponent(window.location.href);
+      const url = encodeURIComponent(window.location.origin + window.location.pathname);
       window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
     }
 
