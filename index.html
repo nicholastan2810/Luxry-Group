@@ -4,6 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    // Redirect from index.html to canonical root URL
+    if (window.location.pathname === '/index.html') {
+      window.location.replace('/');
+    }
+  </script>
   <title>Luxry Capital</title>
   <link rel="canonical" href="https://luxrygroup.com/">
   <link rel="stylesheet" href="assets/css/style.css" />
